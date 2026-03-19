@@ -1,6 +1,6 @@
 {
   "name": "@mowgly11/node-logger-js",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a logging system that helps you implement application logs in a stylish and easy way to debug",
   "keywords": [
     "logger",

@@ -29,8 +29,8 @@ class Logger {
      * @param message the message you're trying to print to the stdout
      */
 
-    info(message: string) {
-        console.log(`${chalk.green("[INFO]")}${chalk.cyan(`[${this.name} - ${this.time()}]`)} - ${message}`);
+    info(message: any) {
+        console.log(`${chalk.cyan(`[${this.name} - ${this.time()}]`)} ${chalk.green("[INFO]")} - ${message}`);
     }
 
     /**
@@ -38,8 +38,8 @@ class Logger {
      * @param message the message you're trying to print to the stdout
      */
 
-    warn(message: string) {
-        console.log(`${chalk.yellow("[WARNING]")}${chalk.cyan(`[${this.name} - ${this.time()}]`)} - ${message}`);
+    warn(message: any) {
+        console.log(`${chalk.cyan(`[${this.name} - ${this.time()}]`)} ${chalk.yellow("[WARNING]")} - ${message}`);
     }
 
     /**
@@ -47,8 +47,8 @@ class Logger {
      * @param message the message you're trying to print to the stdout
      */
 
-    error(message: string) {
-        console.log(`${chalk.red("[ERROR]")}${chalk.cyan(`[${this.name} - ${this.time()}]`)} - ${message}`);
+    error(message: any, error: any) {
+        console.log(`${chalk.cyan(`[${this.name} - ${this.time()}]`)} ${chalk.red("[ERROR]")} - ${message}\n${chalk.red("[ERROR DETAILS]")}: ${error}`);
     }
 }
 
